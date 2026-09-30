@@ -10,6 +10,20 @@ Pitwall AI is a German-language university prototype for answering Formula 1 que
 - Streamlit chat UI with Baseline and Hybrid modes
 - Typed Pydantic models, pytest fixtures, Ruff configuration, and evaluation questions
 
+## Screenshots
+
+### Chat interface
+
+![Pitwall AI chat interface](docs/screenshots/pitwall-ai-home.png)
+
+### Verified API answer
+
+![Race winner answer with Jolpica source information](docs/screenshots/pitwall-ai-race-result.png)
+
+### Driver standings and chart
+
+![Two example questions, including a driver standings chart](docs/screenshots/pitwall-ai-two-questions.png)
+
 ## What the assistant can do
 
 | User question | Routing | Result |
