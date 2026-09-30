@@ -1,0 +1,22 @@
+[
+  {"id":"Q01","category":"race winner","question":"Wer gewann den Großen Preis von Monaco 2024?","routing":"tool","tool":"get_race_results","expected":"winner is stated from verified results","sources_required":true},
+  {"id":"Q02","category":"race result","question":"Wie wurde Max Verstappen beim Rennen in Spa 2023 platziert?","routing":"tool","tool":"get_race_results","expected":"race and finishing position","sources_required":true},
+  {"id":"Q03","category":"driver standings","question":"Wie lautete die Fahrerwertung nach 2023?","routing":"tool","tool":"get_driver_standings","expected":"ordered standings with points","sources_required":true},
+  {"id":"Q04","category":"constructor standings","question":"Welche Konstrukteure belegten 2020 die ersten drei Plätze?","routing":"tool","tool":"get_constructor_standings","expected":"top three constructors","sources_required":true},
+  {"id":"Q05","category":"circuit","question":"In welchem Land liegt Suzuka?","routing":"tool","tool":"get_circuit_information","expected":"Japan","sources_required":true},
+  {"id":"Q06","category":"schedule","question":"Welche Rennen gab es in der Saison 2022?","routing":"tool","tool":"get_season_schedule","expected":"race calendar","sources_required":true},
+  {"id":"Q07","category":"driver comparison","question":"Vergleiche Hamilton und Verstappen zwischen 2021 und 2024.","routing":"tool","tool":"compare_drivers","expected":"comparable seasons","sources_required":true},
+  {"id":"Q08","category":"driver results","question":"Welche Rennen gewann Verstappen 2022?","routing":"tool","tool":"get_driver_season_results","expected":"wins only","sources_required":true},
+  {"id":"Q09","category":"concept","question":"Was ist der Unterschied zwischen Fahrer- und Konstrukteurswertung?","routing":"knowledge_base","tool":"search_knowledge_base","expected":"clear conceptual distinction","sources_required":true},
+  {"id":"Q10","category":"concept","question":"Wie funktioniert die Punktevergabe in der Formel 1?","routing":"knowledge_base","tool":"search_knowledge_base","expected":"points explanation","sources_required":true},
+  {"id":"Q11","category":"concept","question":"Was ist ein Sprint-Wochenende?","routing":"knowledge_base","tool":"search_knowledge_base","expected":"sprint explanation","sources_required":true},
+  {"id":"Q12","category":"ambiguous","question":"Wer gewann 2024?","routing":"clarification","tool":null,"expected":"asks for race or championship","sources_required":false},
+  {"id":"Q13","category":"unsupported","question":"Wie wird das Wetter beim nächsten Rennen?","routing":"decline","tool":null,"expected":"no live weather claim","sources_required":false},
+  {"id":"Q14","category":"circuit","question":"Auf welcher Strecke fand der Große Preis von Belgien 2023 statt?","routing":"tool","tool":"get_race_results","expected":"circuit name","sources_required":true},
+  {"id":"Q15","category":"driver","question":"Welche Nationalität hat Lewis Hamilton?","routing":"tool","tool":"get_driver_information","expected":"driver record","sources_required":true},
+  {"id":"Q16","category":"constructor","question":"Was ist Ferrari als Konstrukteur?","routing":"tool","tool":"get_constructor_information","expected":"constructor record","sources_required":true},
+  {"id":"Q17","category":"schedule","question":"Wann findet das nächste verfügbare Rennen statt?","routing":"tool","tool":"get_season_schedule","expected":"available API schedule and data status","sources_required":true},
+  {"id":"Q18","category":"race result","question":"Wer startete beim Rennen in Bahrain 2024 von Pole?","routing":"tool","tool":"get_race_results","expected":"qualifying or result distinction","sources_required":true},
+  {"id":"Q19","category":"out of scope","question":"Wer gewinnt die Fußball-WM 2026?","routing":"decline","tool":null,"expected":"brief scope decline","sources_required":false},
+  {"id":"Q20","category":"ambiguity","question":"Vergleiche die beiden Fahrer.","routing":"clarification","tool":null,"expected":"asks which drivers and seasons","sources_required":false}
+]

@@ -1,0 +1,14 @@
+"""OpenAI Responses API tool definitions."""
+
+TOOLS: list[dict[str, object]] = [
+    {"type": "function", "name": "get_season_schedule", "description": "Get a Formula 1 season schedule.", "parameters": {"type": "object", "properties": {"season": {"type": "integer", "minimum": 1950, "maximum": 2100}}, "required": ["season"], "additionalProperties": False}},
+    {"type": "function", "name": "get_race_results", "description": "Get race results for a season or round.", "parameters": {"type": "object", "properties": {"season": {"type": "integer"}, "round_number": {"type": ["integer", "null"]}}, "required": ["season", "round_number"], "additionalProperties": False}},
+    {"type": "function", "name": "get_driver_standings", "description": "Get driver championship standings.", "parameters": {"type": "object", "properties": {"season": {"type": "integer"}}, "required": ["season"], "additionalProperties": False}},
+    {"type": "function", "name": "get_constructor_standings", "description": "Get constructor championship standings.", "parameters": {"type": "object", "properties": {"season": {"type": "integer"}}, "required": ["season"], "additionalProperties": False}},
+    {"type": "function", "name": "get_circuit_information", "description": "Get circuit information.", "parameters": {"type": "object", "properties": {"name": {"type": "string"}}, "required": ["name"], "additionalProperties": False}},
+    {"type": "function", "name": "get_driver_information", "description": "Get driver information.", "parameters": {"type": "object", "properties": {"name": {"type": "string"}}, "required": ["name"], "additionalProperties": False}},
+    {"type": "function", "name": "get_constructor_information", "description": "Get constructor information.", "parameters": {"type": "object", "properties": {"name": {"type": "string"}}, "required": ["name"], "additionalProperties": False}},
+    {"type": "function", "name": "get_driver_season_results", "description": "Get a driver's season results.", "parameters": {"type": "object", "properties": {"season": {"type": "integer"}, "driver": {"type": "string"}}, "required": ["season", "driver"], "additionalProperties": False}},
+    {"type": "function", "name": "compare_drivers", "description": "Compare two to four drivers across seasons.", "parameters": {"type": "object", "properties": {"start_season": {"type": "integer"}, "end_season": {"type": "integer"}, "drivers": {"type": "array", "items": {"type": "string"}, "minItems": 2, "maxItems": 4}}, "required": ["start_season", "end_season", "drivers"], "additionalProperties": False}},
+    {"type": "function", "name": "search_knowledge_base", "description": "Search local Formula 1 background knowledge.", "parameters": {"type": "object", "properties": {"query": {"type": "string", "maxLength": 500}}, "required": ["query"], "additionalProperties": False}},
+]
