@@ -74,21 +74,3 @@ python scripts/sync_f1_data.py
 ```bat
 start.bat
 ```
-
-## Tests and evaluation
-
-```bat
-test.bat
-```
-
-To generate the local corpus:
-
-```bat
-.venv\Scripts\python.exe scripts\sync_f1_data.py
-```
-
-The test suite uses mocked HTTP and does not call Jolpica or OpenAI. The evaluation script writes a CSV template under `evaluation/results/`; verified ground truth is fetched at evaluation time rather than invented in source control.
-
-## Limitations, privacy, and attribution
-
-The MVP has no telemetry, live race tracking, weather, betting, or race prediction. API responses may be incomplete or temporarily unavailable. Do not place secrets in source control; `.env` is ignored. User questions are sent to OpenAI when Hybrid or Baseline generation is configured, so users must follow their institution's privacy policy. Formula 1 data is retrieved from the unofficial [Jolpica F1 API](https://github.com/f1db/jolpica-f1); this project is not affiliated with Formula 1 and uses no official logos or protected imagery.
