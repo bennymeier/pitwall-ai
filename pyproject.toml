@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pitwall-ai"
+version = "0.1.0"
+description = "Deutschsprachiger Formel-1-Assistent mit OpenAI-Werkzeugaufrufen, Jolpica-API-Daten und lokalem Chroma-Wissenskorpus"
+requires-python = ">=3.12"
+dependencies = [
+  "chromadb>=0.5.0",
+  "httpx>=0.27.0",
+  "openai>=1.50.0",
+  "pydantic>=2.8.0",
+  "pydantic-settings>=2.4.0",
+  "streamlit>=1.38.0",
+  "tenacity>=9.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.6.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "ANN"]
+ignore = ["ANN401"]

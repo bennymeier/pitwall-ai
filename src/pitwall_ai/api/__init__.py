@@ -1,0 +1,1 @@
+"""Jolpica API integration."""
